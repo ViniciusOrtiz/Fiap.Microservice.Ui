@@ -9,7 +9,7 @@ namespace Fiap.Microservices.Ui.Extensions
         public static IServiceCollection AddDbContextService(this IServiceCollection services)
         {
             services.AddDbContext<DatabaseContext>(options =>
-                options.UseSqlite("Data Source=Contatos.db")
+                options.UseInMemoryDatabase("Fiap")
             );
             return services;
         }
